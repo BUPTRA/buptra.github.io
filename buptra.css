@@ -1,29 +1,11 @@
 /* Style sheet for BUPTRA official webiste */
 
 body {
-/*    color: #000000;*/
     font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
-    /*
-    background-image: url("media/Yuri's_Faction_Logo.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #220F08;
-    cursor: wait;
-    */
 }
-
-/* p.one {
-    text-align: center;
-    cursor: sw-resize;
-}
-p.pageOne:first-letter {font-size: 42px; width:200px;}
-p.pageOne:first-line {font-weight: bold;}*/
 
 h1,h2,h3,h4,h5,h6 {
-    /*color: #0000ff;*/
-    /*font-family: Georgia, times new roman, serif;*/
     text-align: center;
-    /*cursor: crosshair;*/
 }
 
 p.obj {
@@ -48,105 +30,3 @@ p.link {
 p.center {
     text-align: center;
 }
-
-/*ul {
-    list-style-image: url("media/allies_logo_small.jpg");
-    cursor: move;}
-
-.dashed {
-    border-style: dashed;
-    border-color: #666666;
-    border-width: 2px;
-    padding: 10px;
-    width: 480px;
-    height: 360px;}
-*/
-/*table {
-    color: black;
-    background-color: #6040A3;
-    width: 550px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #3E4349;
-    font-family:微软雅黑, sans-serif;}
-
-caption {
-    color: #E4E3E9;
-    font-weight: bold;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #ffffff;}
-
-th {
-    height: 25px;
-    width: 50px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #cccccc;}
-
-th.number {
-    width: 50px;
-    text-align: left;
-}
-
-td, th {padding: 5px;}
-
-td {
-    color: #FBFAFF;
-    font-weight: bold;
-    text-align: center;
-    vertical-align: top;
-    cursor: help;}*/
-
-/*a {
-    font-family: verdana, arial, sans-serif;
-    font-size:12px;}
-
-a:link {
-    color:#ff0000;
-    text-decoration:none;}
-
-a:visited {
-    color:#00ff00;
-    text-decoration:none;}
-
-a:active {
-    color:#0000ff;
-    text-decoration:underline;
-    font-weight:bold;}
-
-a:link:hover {
-    color:#00ffff;
-    background-color:#dddddd;
-    text-decoration:underline;
-    font-weight:bold;}*/
-
-/*img {
-    width: 256px;
-}
-
-img.two {
-    position: relative;
-    left: -40px;
-    top: -40px;
-}
-
-img.three {
-    position: relative;
-    left: -80px;
-    top: -80px;
-}
-
-img.four {
-    position: relative;
-    left: -120px;
-    top: -120px;
-}
-
-img.five {
-    position: relative;
-    left: -320px;
-    top: -160px;
-    width: 128px;
-} */
