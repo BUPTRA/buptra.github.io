@@ -30,3 +30,15 @@ p.link {
 p.center {
     text-align: center;
 }
+
+img.threelogos {
+    max-width: 822px;
+}
+
+img.poster {
+    max-width: 1163px;
+}
+
+img.qrcode {
+    max-width: 540px;
+}
