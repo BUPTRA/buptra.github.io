@@ -1,6 +1,7 @@
 【赛事概览】
 赛事名称：若梦杯 — 2018北邮红警邀请赛
-主办方：北邮红警
+主办方：北邮红警（BUPTRA）
+协办方：红色警戒2战网对战平台（Ra2ol）
 比赛时间：2017年12月30日 — 2018年1月1日
 比赛平台：红色警戒2战网对战平台（Ra2ol）
 比赛游戏：命令与征服 红色警戒2：尤里的复仇（1.001）
@@ -17,7 +18,7 @@
 比赛形式：1 VS 1
 
 【组委成员】
-裁判组：A Rocketeer（Rockteer）   Waveforce Artillery（BLACKEAGLE）
+裁判组：A Rocketeer（Rocketeer）   Waveforce Artillery（BLACKEAGLE）
 主播解说：Waveforce Artillery
 技术顾问：A Rocketeer
 
@@ -55,6 +56,8 @@
 季军：32元
 殿军：16元
 第五至第八名：各奖励8元
+
+此外，根据与红警2战网对战平台达成的协议，红警2战网平台将为本届赛事的冠军战队成员提供1个月的VIP会员权限，为亚军、季军、殿军战队成员提供7天的VIP会员权限。
 
 
 
