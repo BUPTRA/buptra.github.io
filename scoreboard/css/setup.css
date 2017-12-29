@@ -3,7 +3,7 @@
     margin-bottom: 60px;
 }
 
-h2, h4, form, col-12 {
+h2, h4, form {
     text-align: center;
 }
 
@@ -23,8 +23,4 @@ h2, h4, form, col-12 {
     pointer-events: none;
     opacity: 0;
     transform: translateY(-50px);
-}
-
-.center {
-    text-align: center;
 }
