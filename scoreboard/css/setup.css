@@ -24,3 +24,11 @@ h2, h4, form {
     opacity: 0;
     transform: translateY(-50px);
 }
+
+.col-12 {
+    text-align: center;
+}
+
+.img-responsive {
+    max-width: 525px;
+}
