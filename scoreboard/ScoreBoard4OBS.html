@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <!-- saved from url=(0178)http://ratotal.cn/scoreboard/static.html?show_score=on&player1_name=%E6%9C%89%E4%B8%AA%E9%98%9F&player1_score=0&player1_faction=e&player2_name=X&player2_score=0&player2_faction=s -->
-<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <title>OBS计分牌</title>
     <link rel="stylesheet" href="./css/scoreboard.css">
-<style id="bigtext-style">.bigtext * { white-space: nowrap; } .bigtext > * { display: block; }
-.bigtext .bigtext-exempt, .bigtext .bigtext-exempt * { white-space: normal; }</style><style id="bigtext-id-bigtext-id0">#bigtext-id0 .bigtext-line0 { font-size: 16px;}</style><style id="bigtext-id-bigtext-id1">#bigtext-id1 .bigtext-line0 { font-size: 16px;}</style></head>
+    <style id="bigtext-style">
+        .bigtext * { white-space: nowrap; } .bigtext > * { display: block; }
+        .bigtext .bigtext-exempt, .bigtext .bigtext-exempt * { white-space: normal; }
+    </style>
+    <style id="bigtext-id-bigtext-id0">
+        #bigtext-id0 .bigtext-line0 { font-size: 16px;}</style><style id="bigtext-id-bigtext-id1">#bigtext-id1 .bigtext-line0 { font-size: 16px;}
+    </style>
+</head>
 <body cz-shortcut-listen="true">
-<div class="scoreborad">
-    <!--Splitter -->
-    <div class="splitter">-</div>
+    <div class="scoreborad">
+        <!--Splitter -->
+        <div class="splitter">-</div>
 
-    <!-- Faction -->
-    <div class="player1-faction"><img src="./img/e.png" class="value"></div>
-    <div class="player2-faction"><img src="./img/s.png" class="value"></div>
-    <div class="faction-mask"></div>
+        <!-- Faction -->
+        <div class="player1-faction"><img src="./img/e.png" class="value"></div>
+        <div class="player2-faction"><img src="./img/s.png" class="value"></div>
+        <div class="faction-mask"></div>
 
-    <!-- Name -->
-    <div class="player1-name bigtext" id="bigtext-id0">
-        <div class="value bigtext-line0">有个队</div>
+        <!-- Name -->
+        <div class="player1-name bigtext" id="bigtext-id0">
+            <div class="value bigtext-line0">有个队</div>
+        </div>
+        <div class="player2-name bigtext" id="bigtext-id1">
+            <div class="value bigtext-line0">X</div>
+        </div>
+
+        <!-- Score -->
+        <div class="player1-score">
+            <div class="value">0</div>
+        </div>
+        <div class="player2-score">
+            <div class="value">0</div>
+        </div>
     </div>
-    <div class="player2-name bigtext" id="bigtext-id1">
-        <div class="value bigtext-line0">X</div>
-    </div>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/bigtext.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var p1Name = getUrlParam('player1_name');
+            var p2Name = getUrlParam('player2_name');
+            var p1Score = getUrlParam('player1_score');
+            var p2Score = getUrlParam('player2_score');
+            var p1Faction = getUrlParam('player1_faction');
+            var p2Faction = getUrlParam('player2_faction');
+            // var show_score = getUrlParam('show_score');
 
-    <!-- Score -->
-    <div class="player1-score">
-        <div class="value">0</div>
-    </div>
-    <div class="player2-score">
-        <div class="value">0</div>
-    </div>
-</div>
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./js/bigtext.js"></script>
-<script type="text/javascript" src="./js/common.js"></script>
-<script type="text/javascript">
-    (function () {
-        var p1Name = getUrlParam('player1_name');
-        var p2Name = getUrlParam('player2_name');
-        var p1Score = getUrlParam('player1_score');
-        var p2Score = getUrlParam('player2_score');
-        var p1Faction = getUrlParam('player1_faction');
-        var p2Faction = getUrlParam('player2_faction');
-        var show_score = getUrlParam('show_score');
+            // if (!show_score) {
+            //     $('.splitter').text('VS');
+            //     $('.player1-score').hide();
+            //     $('.player2-score').hide();
+            // }
 
-        if (!show_score) {
-            $('.splitter').text('VS');
-            $('.player1-score').hide();
-            $('.player2-score').hide();
-        }
+            p1Name = cleanPlayerName(p1Name);
+            p2Name = cleanPlayerName(p2Name);
 
-        p1Name = cleanPlayerName(p1Name);
-        p2Name = cleanPlayerName(p2Name);
+            update(p1Name, p2Name, p1Score, p2Score, p1Faction, p2Faction, show_score);
+        })();
+    </script>
 
-        // update(p1Name, p2Name, p1Score, p2Score, p1Faction, p2Faction, show_score);
-    })();
-</script>
-
-</body></html>
+</body>
+</html>
