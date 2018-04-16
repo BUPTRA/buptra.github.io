@@ -10,6 +10,7 @@ body.hidden,
 
 @font-face {
     font-family: 'Xolonium';
+    /*, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;*/
     src: url(../fonts/Xolonium-Regular.otf) format('opentype');
     font-weight: normal;
     font-style: italic;
