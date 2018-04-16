@@ -1,5 +1,6 @@
 var RE_FACTION = /\s*\((s|a|e)\)/i;
-var CHALLONGE_API_URL = 'http://challonge.doctype-html.com/v1';
+// var CHALLONGE_API_URL = 'http://challonge.doctype-html.com/v1';
+var CHALLONGE_API_URL = 'https://api.challonge.com/v1';
 var BIG_TEXT_OPT = {minfontsize: 14, maxfontsize: 16};
 
 function getApiKey() {
@@ -7,7 +8,7 @@ function getApiKey() {
     if (apiKey) {
         return apiKey.replace(/\+/g, ''); // 移除多余的空格 (在文本框中输入内容提交后，空格会转义变成+)
     } else {
-        return 'Ulba4J0tw4XOVfR4kqMcOumO8m0JYUlLBEzmMHbF';
+        return 'bTEtOC8tGjVOldLqDXLwk8i0Xh0ouhNOBGaP5Z73';
     }
 }
 
