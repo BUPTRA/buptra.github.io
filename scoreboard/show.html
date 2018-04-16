@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OBS计分牌</title>
+    <link rel="stylesheet" href="./css/scoreboard.css">
+</head>
+<body class="hidden">
+<div class="scoreborad">
+    <!--Splitter -->
+    <div class="splitter"></div>
+
+    <!-- Faction -->
+    <div class="player1-faction"><img src="./img/s2.png" class="value hidden"/></div>
+    <div class="player2-faction"><img src="./img/a2.png" class="value hidden"/></div>
+    <div class="faction-mask"></div>
+
+    <!-- Name -->
+    <div class="player1-name">
+        <div class="value">???</div>
+    </div>
+    <div class="player2-name">
+        <div class="value">???</div>
+    </div>
+
+    <!-- Score -->
+    <div class="player1-score">
+        <div class="value"></div>
+    </div>
+    <div class="player2-score">
+        <div class="value"></div>
+    </div>
+</div>
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/bigtext.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript">
+    (function () {
+        var REFRESH_DELAY, tournamentId, tournamentName, matchId, showScore, $scoreborad, $splitter, $player1Name,
+            $player2Name, $player1Score, $player2Score, $player1Faction, $player2Faction;
+
+        REFRESH_DELAY = 10000;
+        tournamentId = getUrlParam('tournament_id');
+        tournamentName = getUrlParam('tournament_name');
+        matchId = getUrlParam('match_id');
+        showScore = getUrlParam('show_score');
+
+        if (!tournamentId || !matchId) {
+            location.href = './setup.html';
+        } else {
+            $('body').removeClass('hidden');
+        }
+
+        $scoreborad = $('.scoreborad');
+        $splitter = $('.splitter');
+        $player1Name = $('.player1-name .value');
+        $player2Name = $('.player2-name .value');
+        $player1Score = $('.player1-score .value');
+        $player2Score = $('.player2-score .value');
+        $player1Faction = $('.player1-faction .value');
+        $player2Faction = $('.player2-faction .value');
+
+        $splitter.text(tournamentName || '');
+        loop();
+
+        function loop() {
+            loadMatch(tournamentId, matchId)
+                .then(function (match) {
+                    return $.when(
+                        match,
+                        loadParticipant(tournamentId, match.player1_id),
+                        loadParticipant(tournamentId, match.player2_id)
+                    );
+                })
+                .then(function (match, player1, player2) {
+                    var p1Name, p2Name, scores, p1Score, p2Score, p1Faction, p2Faction;
+
+                    // Name
+                    p1Name = player1.name;
+                    p2Name = player2.name;
+
+                    // Score
+                    p1Score = 0;
+                    p2Score = 0;
+                    if (match.scores_csv.indexOf(',') > -1) {
+                        match.scores_csv.split(',')
+                            .forEach(function (item) {
+                                scores = item.split('-');
+                                parseInt(scores[0]) > parseInt(scores[1]) ? p1Score++ : p2Score++;
+                            });
+                    } else if (match.scores_csv.indexOf('-') > -1) {
+                        scores = match.scores_csv.split('-');
+                        p1Score += parseInt(scores[0]);
+                        p2Score += parseInt(scores[1]);
+                    }
+
+                    // Faction
+                    p1Faction = RE_FACTION.test(p1Name) && p1Name.match(RE_FACTION)[1] || '';
+                    p2Faction = RE_FACTION.test(p2Name) && p2Name.match(RE_FACTION)[1] || '';
+                    p1Name = cleanPlayerName(p1Name);
+                    p2Name = cleanPlayerName(p2Name);
+
+                    if (changed(p1Name, p2Name, p1Score, p2Score, p1Faction, p2Faction)) {
+                        update(p1Name, p2Name, p1Score, p2Score, p1Faction, p2Faction, showScore, function () {
+                            setTimeout(loop, REFRESH_DELAY);
+                        });
+                    } else {
+                        setTimeout(loop, REFRESH_DELAY);
+                    }
+                })
+                .catch(function () {
+                    loop();
+                });
+
+        }
+
+        function changed(p1Name, p2Name, p1Score, p2Score, p1Faction, p2Faction) {
+            return p1Name !== $player1Name.text()
+                || p2Name !== $player2Name.text()
+                || p1Score !== parseInt($player1Score.text())
+                || p2Score !== parseInt($player2Score.text())
+                || p1Faction !== $player1Faction.data('faction')
+                || p2Faction !== $player2Faction.data('faction');
+        }
+
+        function update(p1Name, p2Name, p1Score, p2Score, p1Faction, p2Faction, showScore, callback) {
+            $scoreborad.addClass('hidden');
+            $player1Faction.addClass('hidden');
+            $player2Faction.addClass('hidden');
+
+            $scoreborad.one('webkitTransitionEnd', function () {
+
+                // Name
+                $player1Name.html(p1Name).parent().bigtext(BIG_TEXT_OPT);
+                $player2Name.html(p2Name).parent().bigtext(BIG_TEXT_OPT);
+
+                // Score
+                $player1Score.html(p1Score);
+                $player2Score.html(p2Score);
+
+                // Faction
+                $player1Faction.data('faction', p1Faction);
+                if (p1Faction) {
+                    $player1Faction.prop('src', './img/' + p1Faction + '.png');
+                    $player1Faction.removeClass('hidden');
+                }
+                $player2Faction.data('faction', p2Faction);
+                if (p2Faction) {
+                    $player2Faction.prop('src', './img/' + p2Faction + '.png');
+                    $player2Faction.removeClass('hidden');
+                }
+
+                if ($player1Faction.hasClass('hidden') && $player2Faction.hasClass('hidden')) {
+                    $('.faction-mask').addClass('hidden');
+                } else {
+                    $('.faction-mask').removeClass('hidden');
+                }
+
+                // Splitter
+                $splitter.text('-');
+
+                $scoreborad.removeClass('hidden');
+                $scoreborad.one('webkitTransitionEnd', function () {
+                    setTimeout(callback, REFRESH_DELAY);
+                });
+            });
+        }
+    })();
+</script>
+</body>
+</html>

@@ -259,7 +259,7 @@
             player1 = findPlayerById(participants, match.player1_id);
             player2 = findPlayerById(participants, match.player2_id);
             matchName = match.identifier + '组: ' + player1.name + ' VS ' + player2.name;
-            href = location.origin + '/scoreboard?' + $.param({
+            href = location.origin + '/scoreboard/show.html?' + $.param({
                 tournament_id: tournamentId,
                 tournament_name: tournamentName,
                 match_id: match.id
