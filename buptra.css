@@ -1,4 +1,10 @@
-/* Style sheet for BUPTRA official webiste */
+/* Style sheet for BUPTRA official webiste. */
+
+/* Pandoc default css. */
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
 
 body {
     font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
