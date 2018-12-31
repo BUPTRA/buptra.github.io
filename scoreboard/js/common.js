@@ -1,6 +1,6 @@
 var RE_FACTION = /\s*\((s|a|e)\)/i;
-var CHALLONGE_API_URL = 'http://challonge.doctype-html.com/v1';
-// var CHALLONGE_API_URL = 'https://api.challonge.com/v1';
+// var CHALLONGE_API_URL = 'http://challonge.doctype-html.com/v1';
+var CHALLONGE_API_URL = 'https://api.challonge.com/v1';
 var BIG_TEXT_OPT = {minfontsize: 14, maxfontsize: 16};
 
 function getApiKey() {
