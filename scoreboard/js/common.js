@@ -121,6 +121,7 @@ function loadParticipants(tournamentId) {
     // return $.get(url, {api_key: getApiKey()})
     return $.ajax({
         url: url,
+        data: {api_key: getApiKey()},
         type: "GET",
         beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
     })
@@ -137,6 +138,7 @@ function loadParticipant(tournamentId, participantId) {
     // return $.get(url, {api_key: getApiKey()})
     return $.ajax({
         url: url,
+        data: {api_key: getApiKey()},
         type: "GET",
         beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
     })
@@ -150,6 +152,7 @@ function loadTournaments() {
     // return $.get(url, {api_key: getApiKey()})
     return $.ajax({
         url: url,
+        data: {api_key: getApiKey()},
         type: "GET",
         beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
     })
@@ -165,6 +168,7 @@ function loadMatches(tournamentId) {
     // return $.get(url, {api_key: getApiKey()})
     return $.ajax({
         url: url,
+        data: {api_key: getApiKey()},
         type: "GET",
         beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
     })
@@ -180,6 +184,7 @@ function loadMatch(tournamentId, matchId) {
     // return $.get(url, {api_key: getApiKey()})
     return $.ajax({
         url: url,
+        data: {api_key: getApiKey()},
         type: "GET",
         beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
     })
