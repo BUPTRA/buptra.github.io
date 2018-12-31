@@ -119,12 +119,7 @@ function loadParticipants(tournamentId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants.json';
     // return $.get(url, {api_key: getApiKey()})
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
-    })
+    return fetch(url, { mode: 'no-cors' })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.participant;
@@ -136,12 +131,7 @@ function loadParticipant(tournamentId, participantId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants/' + participantId + '.json';
     // return $.get(url, {api_key: getApiKey()})
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
-    })
+    return fetch(url, { mode: 'no-cors' })
         .then(function (resp) {
             return resp.participant;
         });
@@ -150,12 +140,7 @@ function loadParticipant(tournamentId, participantId) {
 function loadTournaments() {
     var url = CHALLONGE_API_URL + '/tournaments.json';
     // return $.get(url, {api_key: getApiKey()})
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
-    })
+    return fetch(url, { mode: 'no-cors' })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.tournament;
@@ -166,12 +151,7 @@ function loadTournaments() {
 function loadMatches(tournamentId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches.json';
     // return $.get(url, {api_key: getApiKey()})
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
-    })
+    return fetch(url, { mode: 'no-cors' })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.match;
@@ -182,12 +162,7 @@ function loadMatches(tournamentId) {
 function loadMatch(tournamentId, matchId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches/' + matchId + '.json';
     // return $.get(url, {api_key: getApiKey()})
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
-    })
+    return fetch(url, { mode: 'no-cors' })
         .then(function (resp) {
             return resp.match;
         });
