@@ -123,7 +123,7 @@ function loadParticipants(tournamentId) {
         url: url,
         data: {api_key: getApiKey()},
         type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin + '/scoreboard');}
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
     })
         .then(function (resp) {
             return resp.map(function (item) {
@@ -140,7 +140,7 @@ function loadParticipant(tournamentId, participantId) {
         url: url,
         data: {api_key: getApiKey()},
         type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin + '/scoreboard');}
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
     })
         .then(function (resp) {
             return resp.participant;
@@ -154,7 +154,7 @@ function loadTournaments() {
         url: url,
         data: {api_key: getApiKey()},
         type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin + '/scoreboard');}
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
     })
         .then(function (resp) {
             return resp.map(function (item) {
@@ -170,7 +170,7 @@ function loadMatches(tournamentId) {
         url: url,
         data: {api_key: getApiKey()},
         type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin + '/scoreboard');}
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
     })
         .then(function (resp) {
             return resp.map(function (item) {
@@ -186,7 +186,7 @@ function loadMatch(tournamentId, matchId) {
         url: url,
         data: {api_key: getApiKey()},
         type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin + '/scoreboard');}
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://buptra.github.io/scoreboard');}
     })
         .then(function (resp) {
             return resp.match;
