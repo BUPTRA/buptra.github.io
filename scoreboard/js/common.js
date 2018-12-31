@@ -118,7 +118,12 @@ function showAlert(selector) {
 function loadParticipants(tournamentId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants.json';
-    return $.get(url, {api_key: getApiKey()})
+    // return $.get(url, {api_key: getApiKey()})
+    return $.ajax({
+        url: url,
+        type: "GET",
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
+    })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.participant;
@@ -129,7 +134,12 @@ function loadParticipants(tournamentId) {
 function loadParticipant(tournamentId, participantId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants/' + participantId + '.json';
-    return $.get(url, {api_key: getApiKey()})
+    // return $.get(url, {api_key: getApiKey()})
+    return $.ajax({
+        url: url,
+        type: "GET",
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
+    })
         .then(function (resp) {
             return resp.participant;
         });
@@ -137,7 +147,12 @@ function loadParticipant(tournamentId, participantId) {
 
 function loadTournaments() {
     var url = CHALLONGE_API_URL + '/tournaments.json';
-    return $.get(url, {api_key: getApiKey()})
+    // return $.get(url, {api_key: getApiKey()})
+    return $.ajax({
+        url: url,
+        type: "GET",
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
+    })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.tournament;
@@ -147,7 +162,12 @@ function loadTournaments() {
 
 function loadMatches(tournamentId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches.json';
-    return $.get(url, {api_key: getApiKey()})
+    // return $.get(url, {api_key: getApiKey()})
+    return $.ajax({
+        url: url,
+        type: "GET",
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
+    })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.match;
@@ -157,7 +177,12 @@ function loadMatches(tournamentId) {
 
 function loadMatch(tournamentId, matchId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches/' + matchId + '.json';
-    return $.get(url, {api_key: getApiKey()})
+    // return $.get(url, {api_key: getApiKey()})
+    return $.ajax({
+        url: url,
+        type: "GET",
+        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', location.origin);}
+    })
         .then(function (resp) {
             return resp.match;
         });
