@@ -2,6 +2,10 @@ var RE_FACTION = /\s*\((s|a|e)\)/i;
 var CHALLONGE_API_URL = 'https://api.challonge.com/v1';
 var BIG_TEXT_OPT = {minfontsize: 14, maxfontsize: 16};
 
+// TODO: find a stable and independent way to solve CORS problem on
+// client-side instead of using proxy.
+var PROXY_URL = 'https://crossorigin.me/'
+
 function getApiKey() {
     var apiKey = getUrlParam('api_key');
     if (apiKey) {
@@ -125,12 +129,14 @@ function loadParticipants(tournamentId) {
     //         "Content-Type": "application/json",
     //     }
     // })
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    })
+    // return $.ajax({
+    //     url: url,
+    //     data: {api_key: getApiKey()},
+    //     type: "GET",
+    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
+    // })
+    var prepended_url = PROXY_URL + url;
+    return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.participant;
@@ -149,12 +155,14 @@ function loadParticipant(tournamentId, participantId) {
     //         "Content-Type": "application/json",
     //     }
     // })
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    })
+    // return $.ajax({
+    //     url: url,
+    //     data: {api_key: getApiKey()},
+    //     type: "GET",
+    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
+    // })
+    var prepended_url = PROXY_URL + url;
+    return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
             return resp.participant;
         });
@@ -170,12 +178,14 @@ function loadTournaments() {
     //         "Content-Type": "application/json",
     //     }
     // })
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    })
+    // return $.ajax({
+    //     url: url,
+    //     data: {api_key: getApiKey()},
+    //     type: "GET",
+    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
+    // })
+    var prepended_url = PROXY_URL + url;
+    return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.tournament;
@@ -193,12 +203,14 @@ function loadMatches(tournamentId) {
     //         "Content-Type": "application/json",
     //     }
     // })
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    })
+    // return $.ajax({
+    //     url: url,
+    //     data: {api_key: getApiKey()},
+    //     type: "GET",
+    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
+    // })
+    var prepended_url = PROXY_URL + url;
+    return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.match;
@@ -216,12 +228,14 @@ function loadMatch(tournamentId, matchId) {
     //         "Content-Type": "application/json",
     //     }
     // })
-    return $.ajax({
-        url: url,
-        data: {api_key: getApiKey()},
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    })
+    // return $.ajax({
+    //     url: url,
+    //     data: {api_key: getApiKey()},
+    //     type: "GET",
+    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
+    // })
+    var prepended_url = PROXY_URL + url;
+    return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
             return resp.match;
         });
