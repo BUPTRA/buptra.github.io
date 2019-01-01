@@ -118,7 +118,7 @@ function loadParticipants(tournamentId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants.json';
     // return $.get(url, {api_key: getApiKey()})
-    var url_with_params = url + $.params({api_key: getApiKey()});
+    var url_with_params = url + $.param({api_key: getApiKey()});
     return fetch(url_with_params, {
         mode: 'no-cors',
         headers: {
@@ -136,7 +136,7 @@ function loadParticipant(tournamentId, participantId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants/' + participantId + '.json';
     // return $.get(url, {api_key: getApiKey()})
-    var url_with_params = url + $.params({api_key: getApiKey()});
+    var url_with_params = url + $.param({api_key: getApiKey()});
     return fetch(url_with_params, {
         mode: 'no-cors',
         headers: {
@@ -151,7 +151,7 @@ function loadParticipant(tournamentId, participantId) {
 function loadTournaments() {
     var url = CHALLONGE_API_URL + '/tournaments.json';
     // return $.get(url, {api_key: getApiKey()})
-    var url_with_params = url + $.params({api_key: getApiKey()});
+    var url_with_params = url + $.param({api_key: getApiKey()});
     return fetch(url_with_params, {
         mode: 'no-cors',
         headers: {
@@ -168,7 +168,7 @@ function loadTournaments() {
 function loadMatches(tournamentId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches.json';
     // return $.get(url, {api_key: getApiKey()})
-    var url_with_params = url + $.params({api_key: getApiKey()});
+    var url_with_params = url + $.param({api_key: getApiKey()});
     return fetch(url_with_params, {
         mode: 'no-cors',
         headers: {
@@ -185,7 +185,7 @@ function loadMatches(tournamentId) {
 function loadMatch(tournamentId, matchId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches/' + matchId + '.json';
     // return $.get(url, {api_key: getApiKey()})
-    var url_with_params = url + $.params({api_key: getApiKey()});
+    var url_with_params = url + $.param({api_key: getApiKey()});
     return fetch(url_with_params, {
         mode: 'no-cors',
         headers: {
