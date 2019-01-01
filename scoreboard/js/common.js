@@ -1,5 +1,4 @@
 var RE_FACTION = /\s*\((s|a|e)\)/i;
-// var CHALLONGE_API_URL = 'http://challonge.doctype-html.com/v1';
 var CHALLONGE_API_URL = 'https://api.challonge.com/v1';
 var BIG_TEXT_OPT = {minfontsize: 14, maxfontsize: 16};
 
@@ -119,7 +118,13 @@ function loadParticipants(tournamentId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants.json';
     // return $.get(url, {api_key: getApiKey()})
-    return fetch(url, { mode: 'no-cors' })
+    var url_with_params = url + $.params({api_key: getApiKey()});
+    return fetch(url_with_params, {
+        mode: 'no-cors',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.participant;
@@ -131,7 +136,13 @@ function loadParticipant(tournamentId, participantId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants/' + participantId + '.json';
     // return $.get(url, {api_key: getApiKey()})
-    return fetch(url, { mode: 'no-cors' })
+    var url_with_params = url + $.params({api_key: getApiKey()});
+    return fetch(url_with_params, {
+        mode: 'no-cors',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
         .then(function (resp) {
             return resp.participant;
         });
@@ -140,7 +151,13 @@ function loadParticipant(tournamentId, participantId) {
 function loadTournaments() {
     var url = CHALLONGE_API_URL + '/tournaments.json';
     // return $.get(url, {api_key: getApiKey()})
-    return fetch(url, { mode: 'no-cors' })
+    var url_with_params = url + $.params({api_key: getApiKey()});
+    return fetch(url_with_params, {
+        mode: 'no-cors',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.tournament;
@@ -151,7 +168,13 @@ function loadTournaments() {
 function loadMatches(tournamentId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches.json';
     // return $.get(url, {api_key: getApiKey()})
-    return fetch(url, { mode: 'no-cors' })
+    var url_with_params = url + $.params({api_key: getApiKey()});
+    return fetch(url_with_params, {
+        mode: 'no-cors',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
         .then(function (resp) {
             return resp.map(function (item) {
                 return item.match;
@@ -162,7 +185,13 @@ function loadMatches(tournamentId) {
 function loadMatch(tournamentId, matchId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches/' + matchId + '.json';
     // return $.get(url, {api_key: getApiKey()})
-    return fetch(url, { mode: 'no-cors' })
+    var url_with_params = url + $.params({api_key: getApiKey()});
+    return fetch(url_with_params, {
+        mode: 'no-cors',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
         .then(function (resp) {
             return resp.match;
         });
