@@ -122,19 +122,6 @@ function loadParticipants(tournamentId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants.json';
     // return $.get(url, {api_key: getApiKey()})
-    // var url_with_params = url + '?' + $.param({api_key: getApiKey()});
-    // return fetch(url_with_params, {
-    //     mode: 'no-cors',
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     }
-    // })
-    // return $.ajax({
-    //     url: url,
-    //     data: {api_key: getApiKey()},
-    //     type: "GET",
-    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    // })
     var prepended_url = PROXY_URL + url;
     return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
@@ -148,19 +135,6 @@ function loadParticipant(tournamentId, participantId) {
     var tournament_url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId);
     var url = tournament_url + '/participants/' + participantId + '.json';
     // return $.get(url, {api_key: getApiKey()})
-    // var url_with_params = url + '?' + $.param({api_key: getApiKey()});
-    // return fetch(url_with_params, {
-    //     mode: 'no-cors',
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     }
-    // })
-    // return $.ajax({
-    //     url: url,
-    //     data: {api_key: getApiKey()},
-    //     type: "GET",
-    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    // })
     var prepended_url = PROXY_URL + url;
     return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
@@ -171,19 +145,6 @@ function loadParticipant(tournamentId, participantId) {
 function loadTournaments() {
     var url = CHALLONGE_API_URL + '/tournaments.json';
     // return $.get(url, {api_key: getApiKey()})
-    // var url_with_params = url + '?' + $.param({api_key: getApiKey()});
-    // return fetch(url_with_params, {
-    //     mode: 'no-cors',
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     }
-    // })
-    // return $.ajax({
-    //     url: url,
-    //     data: {api_key: getApiKey()},
-    //     type: "GET",
-    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    // })
     var prepended_url = PROXY_URL + url;
     return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
@@ -196,19 +157,6 @@ function loadTournaments() {
 function loadMatches(tournamentId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches.json';
     // return $.get(url, {api_key: getApiKey()})
-    // var url_with_params = url + '?' + $.param({api_key: getApiKey()});
-    // return fetch(url_with_params, {
-    //     mode: 'no-cors',
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     }
-    // })
-    // return $.ajax({
-    //     url: url,
-    //     data: {api_key: getApiKey()},
-    //     type: "GET",
-    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    // })
     var prepended_url = PROXY_URL + url;
     return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
@@ -221,19 +169,6 @@ function loadMatches(tournamentId) {
 function loadMatch(tournamentId, matchId) {
     var url = CHALLONGE_API_URL + '/tournaments/' + encodeURIComponent(tournamentId) + '/matches/' + matchId + '.json';
     // return $.get(url, {api_key: getApiKey()})
-    // var url_with_params = url + '?' + $.param({api_key: getApiKey()});
-    // return fetch(url_with_params, {
-    //     mode: 'no-cors',
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     }
-    // })
-    // return $.ajax({
-    //     url: url,
-    //     data: {api_key: getApiKey()},
-    //     type: "GET",
-    //     beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');}
-    // })
     var prepended_url = PROXY_URL + url;
     return $.get(prepended_url, { api_key: getApiKey() })
         .then(function (resp) {
