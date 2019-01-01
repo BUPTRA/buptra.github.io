@@ -4,7 +4,7 @@ var BIG_TEXT_OPT = {minfontsize: 14, maxfontsize: 16};
 
 // TODO: find a stable and independent way to solve CORS problem on
 // client-side instead of using proxy.
-var PROXY_URL = 'https://crossorigin.me/'
+var PROXY_URL = 'https://cors-anywhere.herokuapp.com/'
 
 function getApiKey() {
     var apiKey = getUrlParam('api_key');
