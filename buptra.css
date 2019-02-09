@@ -1,11 +1,28 @@
 /* Style sheet for BUPTRA official webiste. */
 
 /* Pandoc default css. */
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+code {
+    white-space: pre-wrap;
+}
 
+span.smallcaps {
+    font-variant: small-caps;
+}
+
+span.underline {
+    text-decoration: underline;
+}
+
+div.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+/**
+ * BUPTRA css
+ * Author: Rocketeer
+ */
 body {
     font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
@@ -69,4 +86,34 @@ button {
     position: fixed;
     right: 2%;
     top: 2%;
+}
+
+/**
+ * GitHub Corners, page css
+ * Author: Tim Holman
+ */
+.github-corner:hover .octo-arm {
+    animation:octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%, 100% {
+        transform:rotate(0)
+    }
+    20%, 60% {
+        transform:rotate(-25deg)
+    }
+    40%, 80% {
+        transform:rotate(10deg)
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation:none
+    }
+
+    .github-corner .octo-arm {
+        animation:octocat-wave 560ms ease-in-out
+    }
 }
