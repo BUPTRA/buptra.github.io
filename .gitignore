@@ -1,0 +1,9 @@
+## Emacs
+*~
+\#*\#
+
+## jekyll
+/_site/
+/vendor/
+/.bundle/
+Gemfile*
