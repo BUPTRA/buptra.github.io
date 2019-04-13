@@ -1,0 +1,29 @@
+- name: 首页
+  link: /
+  subitems:
+
+- name: 游戏入门
+  link: /getting-started
+  subitems:
+
+- name: 任务
+  link: /missions
+  subitems:
+    - name: RA2原版
+      link: /missions/ra2
+    - name: 尤里的复仇
+      link: /missions/yr
+    - name: RA3原版
+      link: /missions/ra3
+    - name: 起义时刻
+      link: /missions/uprising
+    - name: 心灵终结
+      link: /missions/mo
+
+- name: 相关赛事
+  link: /tournaments
+  subitems:
+
+- name: 指挥官们
+  link: /staff.html
+  subitems:

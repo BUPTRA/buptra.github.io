@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% assign author = site.authors | where: 'short_name', page.author | first %}
+{% if author %}
+  <p align="right">
+    By: <a href="{{ author.url | relative_url }}">{{ author.name }}</a>
+  </p>
+{% endif %}
+
+{% if page.date %}
+  <p align="right">
+    {% include utils/date-localizer.html date=page.date %}
+  </p>
+{% endif %}
