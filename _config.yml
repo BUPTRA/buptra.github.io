@@ -25,3 +25,13 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+exclude:
+  - vendor
+  - .gitignore
+  - .gitattribute
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - TODO.md
