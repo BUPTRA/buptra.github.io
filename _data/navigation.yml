@@ -1,10 +1,8 @@
 - name: 首页
   link: /
-  subitems:
 
 - name: 游戏入门
   link: /getting-started
-  subitems:
 
 - name: 任务
   link: /missions
@@ -22,8 +20,6 @@
 
 - name: 相关赛事
   link: /tournaments
-  subitems:
 
 - name: 指挥官们
   link: /staff.html
-  subitems:
