@@ -54,3 +54,21 @@
 #content a:hover{color:blue;}
 #content a:active{color:blue;}
 #content p{font-size:15px;text-indent:30px;line-height:25px;}
+
+#content {
+  #campaign {
+    .col1 {
+      width: 16%;
+    }
+    .col2 {
+      width: 56%;
+    }
+    .col3 {
+      width: 28%;
+    }
+    .soviet{color:darkred;}
+    .allied{color:darkblue;}
+    .epsilon{color:#460046;}
+    .foehn{color:#003E3E;}
+  }
+}

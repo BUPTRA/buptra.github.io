@@ -1,0 +1,15 @@
+- short: 苏
+  name: 苏联
+  class: soviet
+
+- short: 盟
+  name: 盟军
+  class: allied
+
+- short: 尤
+  name: 厄普西隆
+  class: epsilon
+
+- short: 焚
+  name: 焚风
+  class: foehn
