@@ -35,16 +35,16 @@ body {
     text-indent: 2em;
 }
 
-p.obj {
-    color: red;
+.msg {
+    color: #888888;
     text-align: center;
+    font-style: italic;
     font-weight: bold;
 }
 
-p.msg {
-    color: #888888;
+p.obj {
+    color: red;
     text-align: center;
-    font-style: italic;   
     font-weight: bold;
 }
 
