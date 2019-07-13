@@ -5,11 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>创建计分板</title>
-    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap-switch.min.css"> -->
-    <link rel="stylesheet" href="./css/setup.css">
-    <link rel="stylesheet" href="./css/scoreboard.css">
-    <link rel="stylesheet" type="text/css" href="../buptra.css" />
+    <!-- <link rel="stylesheet" href="/scoreboard/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/scoreboard/css/bootstrap-switch.min.css"> -->
+    <link rel="stylesheet" href="/scoreboard/css/setup.css">
+    <link rel="stylesheet" href="/scoreboard/css/scoreboard.css">
+    <link rel="stylesheet" type="text/css" href="/buptra.css" />
     <style type="text/css">
         .control-label {
             font-size: 16px;
@@ -40,7 +40,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <img class="img-responsive center-block" src="./img/preview.png" alt="scoreboard" width="30%">
+            <img class="img-responsive center-block" src="/scoreboard/img/preview.png" alt="scoreboard" width="30%">
             <h2>创建计分板</h2>
             <hr>
         </div>
@@ -119,11 +119,11 @@
     </div>
 </div>
 <p>注明：此计分板的创意及部分素材来自<a href="http://ratotal.cn/portal.php" target="_blank">RAT红警社区</a>，原贴<a href="http://ratotal.cn/forum.php?mod=viewthread&tid=2534&page=1" target="_blank">在此</a>，谢过！</p>
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<!-- <script type="text/javascript" src="./js/bootstrap.min.js"></script> -->
-<!-- <script type="text/javascript" src="./js/bootstrap-switch.min.js"></script> -->
-<script type="text/javascript" src="./js/clipboard.min.js"></script>
-<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="/scoreboard/js/jquery-3.2.1.min.js"></script>
+<!-- <script type="text/javascript" src="/scoreboard/js/bootstrap.min.js"></script> -->
+<!-- <script type="text/javascript" src="/scoreboard/js/bootstrap-switch.min.js"></script> -->
+<script type="text/javascript" src="/scoreboard/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/scoreboard/js/common.js"></script>
 <script type="text/javascript">
 
     (function () {
@@ -156,8 +156,8 @@
         //     });
 
         function buildUrl() {
-            var path = location.pathname;
-            return path.substring(0, path.lastIndexOf('/')) + '/show-manually.html?' + $('#form').serialize();
+            var url = location.href;
+            return url.substring(0, url.lastIndexOf('/')) + '/show-manually.html?' + $('#form').serialize();
         }
     })();
 </script>

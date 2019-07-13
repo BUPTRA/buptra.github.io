@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>OBS计分牌</title>
-    <link rel="stylesheet" href="./css/scoreboard.css">
-    <link rel="stylesheet" type="text/css" href="../buptra.css" />
+    <link rel="stylesheet" href="/scoreboard/css/scoreboard.css">
+    <link rel="stylesheet" type="text/css" href="/buptra.css" />
 </head>
 <body class="hidden">
 <div class="scoreborad">
@@ -12,8 +12,8 @@
     <div class="splitter"></div>
 
     <!-- Faction -->
-    <div class="player1-faction"><img src="./img/y2.png" class="value hidden"/></div>
-    <div class="player2-faction"><img src="./img/e3.png" class="value hidden"/></div>
+    <div class="player1-faction"><img src="/scoreboard/img/y2.png" class="value hidden"/></div>
+    <div class="player2-faction"><img src="/scoreboard/img/e3.png" class="value hidden"/></div>
     <div class="faction-mask"></div>
 
     <!-- Name -->
@@ -32,9 +32,9 @@
         <div class="value"></div>
     </div>
 </div>
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./js/bigtext.js"></script>
-<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="/scoreboard/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/scoreboard/js/bigtext.js"></script>
+<script type="text/javascript" src="/scoreboard/js/common.js"></script>
 <script type="text/javascript">
     (function () {
         var REFRESH_DELAY, tournamentId, tournamentName, matchId, showScore, $scoreborad, $splitter, $player1Name,
@@ -47,7 +47,7 @@
         showScore = getUrlParam('show_score');
 
         if (!tournamentId || !matchId) {
-            location.href = './setup.html';
+            location.href = '/scoreboard/setup.html';
         } else {
             $('body').removeClass('hidden');
         }
@@ -142,12 +142,12 @@
                 // Faction
                 $player1Faction.data('faction', p1Faction);
                 if (p1Faction) {
-                    $player1Faction.prop('src', './img/' + p1Faction + '.png');
+                    $player1Faction.prop('src', '/scoreboard/img/' + p1Faction + '.png');
                     $player1Faction.removeClass('hidden');
                 }
                 $player2Faction.data('faction', p2Faction);
                 if (p2Faction) {
-                    $player2Faction.prop('src', './img/' + p2Faction + '.png');
+                    $player2Faction.prop('src', '/scoreboard/img/' + p2Faction + '.png');
                     $player2Faction.removeClass('hidden');
                 }
 

@@ -5,9 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>ScoreBoard Setup</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/setup.css">
-    <link rel="stylesheet" type="text/css" href="../buptra.css" />
+    <link rel="stylesheet" href="/scoreboard/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/scoreboard/css/setup.css">
+    <link rel="stylesheet" type="text/css" href="/buptra.css" />
     <style type="text/css">
         .loader {
             color: #d9edf7;
@@ -139,7 +139,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <img class="img-responsive center-block" src="./img/preview.png" alt="scoreboard">
+            <img class="img-responsive center-block" src="/scoreboard/img/preview.png" alt="scoreboard">
             <h2>查看比赛</h2>
         </div>
     </div>
@@ -184,10 +184,10 @@
     </div>
 </div>
 <p>注明：此计分板来源于<a href="http://ratotal.cn/portal.php" target="_blank">RAT红警社区</a>，原贴<a href="http://ratotal.cn/forum.php?mod=viewthread&tid=2534&page=1" target="_blank">在此</a>，谢过！</p>
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./js/clipboard.min.js"></script>
-<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="/scoreboard/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/scoreboard/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/scoreboard/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/scoreboard/js/common.js"></script>
 <script type="text/javascript">
     (function () {
         var tournamentId = getUrlParam('tournament_id').replace('https://challonge.com/', '');
@@ -260,8 +260,8 @@
             player1 = findPlayerById(participants, match.player1_id);
             player2 = findPlayerById(participants, match.player2_id);
             matchName = match.identifier + '组: ' + player1.name + ' VS ' + player2.name;
-            var path = location.pathname;
-            href = path.substring(0, path.lastIndexOf('/')) + '/show.html?' + $.param({
+            var url = location.href;
+            href = url.substring(0, url.lastIndexOf('/')) + '/show.html?' + $.param({
                 tournament_id: tournamentId,
                 tournament_name: tournamentName,
                 match_id: match.id
