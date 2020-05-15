@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>北邮红警</title>
+    <link rel="stylesheet" type="text/css" href="/frame.css">
+    <script src="https://cdn.bootcss.com/showdown/1.9.0/showdown.min.js"></script>
+    <script type="text/javascript" src="/js/read_file.js"></script>
+    <script type="text/javascript" src="/js/frontpage.js"></script>
+    <script type="text/javascript" src="/js/beginning.js"></script>
+    <script type="text/javascript" src="/js/ra2.js"></script>
+    <script type="text/javascript" src="/js/mo.js"></script>
+</head>
+
+<body onload="change_button(0);index_section();read_md('/md/frontpage.md')">
+
+    <div id="logo">
+        <div id="logo_left">
+            <img src="/img/logo_left.png">
+        </div>
+        <div id="logo_middle">
+            <img src="/img/logo_middle.png">
+        </div>
+        <div id="logo_right">
+            <img src="/img/logo_right.png">
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div id="catalog">
+        <input type="button" value="首页" onclick="change_button(0);index_section();read_md('/md/frontpage.md')" />
+        <input type="button" value="资源下载" onclick="change_button(1)" />
+        <input type="button" value="任务&MOD" onclick="change_button(2);mission_section();change_section(0);read_md('/md/beginning.md')" />
+        <input type="button" value="相关赛事" onclick="change_button(3)" />
+    </div>
+
+    <div id="section">
+
+    </div>
+
+    <div id="content">
+
+    </div>
+
+</body>
+
+</html>
