@@ -88,6 +88,16 @@ button {
     top: 2%;
 }
 
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
 /**
  * GitHub Corners, page css
  * Author: Tim Holman
