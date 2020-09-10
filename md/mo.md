@@ -22,7 +22,7 @@ Mentalmeisters于2016年12月16日发布了心灵终结3.3版本，该系列的�
 
 ## 前情提要
 
-参见<a onclick="change_section(1);read_md('missions-and-mods/ra2/ra2.md');ra2_list()">RA2原版前情提要</a>
+参见<a onclick="change_section(1);read_md('/md/ra2.md');ra2_list()">RA2原版前情提要</a>
 
 ## 故事背景
 
