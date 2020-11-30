@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历届赛事</title>
+    <link rel="stylesheet" type="text/css" href="/tournament/css/buptra.css" />
+    <style type="text/css">
+     .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+     .tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+     .tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+     .tg .tg-qtf5{border-color:#000000;text-align:left}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+    <script type="text/javascript">
+     function view(filename) {
+       if(filename) {
+         var text = null;
+         var xmlhttp = new XMLHttpRequest();
+         xmlhttp.open("GET", filename, false);
+         xmlhttp.send();
+         if (xmlhttp.status==200) {
+           text = xmlhttp.responseText;
+           var html = (new showdown.Converter()).makeHtml(text);
+           document.getElementById('viewDiv').innerHTML = html;
+         }
+       }
+     }
+    </script>
+  </head>
+  <body>
+    <h1>历届赛事</h1>
+    <table class="tg">
+      <tr>
+        <th class="tg-qtf5">时间</th>
+        <th class="tg-qtf5">赛事</th>
+        <th class="tg-qtf5">赛制</th>
+        <th class="tg-qtf5">项目</th>
+        <th class="tg-qtf5">赛程</th>
+        <th class="tg-qtf5">视频</th>
+        <th class="tg-qtf5">游戏录像文件</th>
+        <th class="tg-qtf5">冠军</th>
+      </tr>
+      <tr>
+        <td class="tg-qtf5">2017年12月30日 &ndash; 2018年1月1日</td>
+        <td class="tg-qtf5">若梦杯2018</td>
+        <td class="tg-qtf5">
+          <button onClick="view('ruomeng2018-rules.md')">点此查看</button>
+        </td>
+        <td class="tg-qtf5">YR</td>
+        <td class="tg-qtf5"><a href="https://challonge.com/zh_CN/ruomeng2018">Challonge页面</a></td>
+        <td class="tg-qtf5" colspan="2"><a href="https://space.bilibili.com/155512273/channel/detail?cid=30071">B站链接</a></td>
+        <td class="tg-qtf5">羊村（Earth，soo_，Watersnake）</td>
+      </tr>
+      <tr>
+        <td class="tg-qtf5">2018年4月29日 &ndash; 2018年5月1日</td>
+        <td class="tg-qtf5">御风杯2018</td>
+        <td class="tg-qtf5">
+          <button onClick="view('yufeng2018-rules.md')">点此查看</button>
+        </td>
+        <td class="tg-qtf5">YR</td>
+        <td class="tg-qtf5"><a href="https://challonge.com/zh_CN/yufeng2018">Challonge页面</a></td>
+        <td class="tg-qtf5" colspan="2"><a href="https://space.bilibili.com/155512273/channel/detail?cid=30071">B站链接</a></td>
+        <td class="tg-qtf5">Mirage（85hui，suzhiman）</td>
+      </tr>
+      <tr>
+        <td class="tg-qtf5" rowspan="2">2018年12月29日 &ndash; 2019年1月2日</td>
+        <td class="tg-qtf5" rowspan="2">若梦杯2019</td>
+        <td class="tg-qtf5" rowspan="2">
+          <button onClick="view('ruomeng2019-rules.md')">点此查看</button>
+        </td>
+        <td class="tg-qtf5">YR</td>
+        <td class="tg-qtf5"><a href="https://challonge.com/zh_CN/ruomeng2019yr">Challonge页面</a></td>
+        <td class="tg-qtf5" colspan="2"><a href="https://space.bilibili.com/155512273/channel/detail?cid=30071">B站链接</a></td>
+        <td class="tg-qtf5">IR</td>
+      </tr>
+      <tr>
+        <td class="tg-qtf5">RA3</td>
+        <td class="tg-qtf5">missing</td>
+        <td class="tg-qtf5"><a href="https://space.bilibili.com/155512273/channel/detail?cid=60502">B站链接</a></td>
+        <td class="tg-qtf5">missing</td>
+        <td class="tg-qtf5">行星之上</td>
+      </tr>
+      <tr>
+        <td class="tg-qtf5" rowspan="3">2019年7月5日 &ndash; 2019年7月7日</td>
+        <td class="tg-qtf5" rowspan="3">御风杯2019</td>
+        <td class="tg-qtf5" rowspan="3">
+          <button onClick="view('yufeng2019-rules.md')">点此查看</button>
+        </td>
+        <td class="tg-qtf5">YR</td>
+        <td class="tg-qtf5"><a href="https://challonge.com/zh_CN/yufeng2019yr">Challonge页面</a></td>
+        <td class="tg-qtf5" colspan="2"><a href="https://space.bilibili.com/155512273/channel/detail?cid=30071">B站链接</a></td>
+        <td class="tg-qtf5">女装少女体（007，Topo）</td>
+      </tr>
+      <tr>
+        <td class="tg-qtf5">RA3</td>
+        <td class="tg-qtf5"><a href="https://challonge.com/zh_CN/yufeng2019ra3">Challonge页面</a></td>
+        <!-- TODO 设计视频链接合集页面加载。-->
+        <td class="tg-qtf5">
+          <button onClick="view('yufeng2019-ra3-videos.md')">点此查看</button>
+        </td>
+        <td class="tg-qtf5"><a href="https://pan.baidu.com/s/1l5hr_7zeB0dgtNEVAFSW0A">百度网盘链接</a>（提取码：8ljb）</td>
+        <td class="tg-qtf5">星星之火（行星之上，GDI）</td>
+      </tr>
+      <tr>
+        <td class="tg-qtf5">MO</td>
+        <td class="tg-qtf5"><a href="https://challonge.com/zh_CN/yufeng2019mo">Challonge页面</a></td>
+        <td class="tg-qtf5" colspan="2"><a href="https://space.bilibili.com/155512273/channel/detail?cid=79223">B站链接</a></td>
+        <td class="tg-qtf5">快乐星猫（星星，Nigger）</td>
+      </tr>
+      <tr>
+        <td class="tg-qtf5">2020年1月10日 &ndash; 2020年1月12日</td>
+        <td class="tg-qtf5">若梦杯2020</td>
+        <td class="tg-qtf5">
+          <button onClick="view('ruomeng2020-rules.md')">点此查看</button>
+        </td>
+        <td class="tg-qtf5">YR</td>
+        <td class="tg-qtf5"><a href="https://challonge.com/zh_CN/ruomeng2020yr">Challonge页面</a></td>
+        <td class="tg-qtf5" colspan="2"><a href="https://space.bilibili.com/155512273/channel/detail?cid=30071">B站链接</a></td>
+        <td class="tg-qtf5">BBS</td>
+      </tr>
+      <tr>
+        <td class="tg-qtf5">2020年7月3日 &ndash; 2020年7月6日</td>
+        <td class="tg-qtf5">御风杯2020</td>
+        <td class="tg-qtf5">
+          <button onClick="view('yufeng2020-rules.md')">点此查看</button>
+        </td>
+        <td class="tg-qtf5">YR</td>
+        <td class="tg-qtf5"><a href="https://challonge.com/zh_CN/yufeng2020yr">Challonge页面</a></td>
+        <td class="tg-qtf5" colspan="2"><a href="https://space.bilibili.com/155512273/channel/detail?cid=30071">B站链接</a></td>
+        <td class="tg-qtf5">HaibaraFan（KaguraNana，Loadstar）</td>
+      </tr>
+    </table>
+    <hr>
+    <div id="viewDiv"></div>
+  </body>
+</html>

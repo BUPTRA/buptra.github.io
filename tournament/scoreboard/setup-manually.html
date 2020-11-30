@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>创建计分板</title>
+    <!-- <link rel="stylesheet" href="/tournament/scoreboard/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/tournament/scoreboard/css/bootstrap-switch.min.css"> -->
+    <link rel="stylesheet" href="/tournament/scoreboard/css/setup.css">
+    <link rel="stylesheet" href="/tournament/scoreboard/css/scoreboard.css">
+    <link rel="stylesheet" type="text/css" href="/tournament/css/buptra.css" />
+    <style type="text/css">
+        .control-label {
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .btn-group {
+            margin: 0 auto;
+            display: block;
+            width: 191px;
+        }
+    </style>
+</head>
+<body>
+<div class="alert alert-success alert-dismissible alert-copy-success hidden" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+    </button>
+    <p>复制成功</p>
+    <p>在 OBS 中添加 BrowserSource，粘贴到 Url 栏即可。</p>
+</div>
+<div class="alert alert-danger alert-dismissible alert-copy-error hidden" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+    </button>
+    <p>复制失败</p>
+    <p>请点击预览按钮后复制计分板链接；</p>
+    <p>然后在 OBS 中添加 BrowserSource，粘贴到 Url 栏即可。</p>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <img class="img-responsive center-block" src="/tournament/scoreboard/img/preview.png" alt="scoreboard" width="30%">
+            <h2>创建计分板</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-push-3 col-lg-4 col-lg-push-4 col-xs-12">
+            <form id="form" class="form-horizontal" action="./show-manually.html" method="GET">
+                <div class="form-group">
+                    <label for="show_score" class="control-label col-sm-3">显示分数:</label>
+                    <div class="col-sm-9 text-right">
+                        <input id="show_score" name="show_score" type="checkbox"/>
+                    </div>
+                </div>
+                <hr>
+                <h4>玩家1</h4>
+                <div class="form-group">
+                    <label for="player1_name" class="control-label col-sm-2">名称: </label>
+                    <div class="col-sm-10">
+                        <input id="player1_name" name="player1_name" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group form-group-score hidden">
+                    <label for="player1_score" class="control-label col-sm-2">分数: </label>
+                    <div class="col-sm-10">
+                        <input id="player1_score" name="player1_score" min="0" value="0" type="number"
+                               class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="player1_faction" class="control-label col-sm-2">阵营: </label>
+                    <div class="col-sm-10">
+                        <select id="player1_faction" name="player1_faction" class="form-control">
+                            <option value="s2">2代苏联</option>
+                            <option value="a2">2代盟军</option>
+                            <option value="y2">2代尤里</option>
+                            <option value="s3">3代苏联</option>
+                            <option value="a3">3代盟军</option>
+                            <option value="e3">3代帝国</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+                <h4>玩家2</h4>
+                <div class="form-group">
+                    <label for="player2_name" class="control-label col-sm-2">名称: </label>
+                    <div class="col-sm-10">
+                        <input id="player2_name" name="player2_name" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group form-group-score hidden">
+                    <label for="player2_score" class="control-label col-sm-2">分数: </label>
+                    <div class="col-sm-10">
+                        <input id="player2_score" name="player2_score" min="0" value="0" type="number"
+                               class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="player2_faction" class="control-label col-sm-2">阵营: </label>
+                    <div class="col-sm-10">
+                        <select id="player2_faction" name="player2_faction" class="form-control">
+                            <option value="s2">2代苏联</option>
+                            <option value="a2">2代盟军</option>
+                            <option value="y2">2代尤里</option>
+                            <option value="s3">3代苏联</option>
+                            <option value="a3">3代盟军</option>
+                            <option value="e3">3代帝国</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-group clearfix" role="group">
+                    <a class="btn btn-default btn-copy" href="javascript:;">复制计分板</a>
+                    <a class="btn btn-default btn-preview" href="javascript:;">预览计分板</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<p>注明：此计分板的创意及部分素材来自<a href="http://ratotal.cn/portal.php" target="_blank">RAT红警社区</a>，原贴<a href="http://ratotal.cn/forum.php?mod=viewthread&tid=2534&page=1" target="_blank">在此</a>，谢过！</p>
+<script type="text/javascript" src="/tournament/scoreboard/js/jquery-3.2.1.min.js"></script>
+<!-- <script type="text/javascript" src="/tournament/scoreboard/js/bootstrap.min.js"></script> -->
+<!-- <script type="text/javascript" src="/tournament/scoreboard/js/bootstrap-switch.min.js"></script> -->
+<script type="text/javascript" src="/tournament/scoreboard/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/tournament/scoreboard/js/common.js"></script>
+<script type="text/javascript">
+
+    (function () {
+
+        $('.btn-preview')
+            .on('click', function (e) {
+                window.open(buildUrl());
+                e.preventDefault();
+            });
+
+        // 复制
+        new Clipboard('.btn-copy',
+            {
+                text: function () {
+                    return buildUrl();
+                }
+            })
+            .on('success', function () {
+                showAlert('.alert-copy-success');
+            })
+            .on('error', function () {
+                showAlert('.alert-copy-error');
+            });
+
+        // // 是否显示分数
+        // $('input[type=checkbox]')
+        //     .bootstrapSwitch()
+        //     .on('switchChange.bootstrapSwitch', function () {
+        //         $('.form-group-score').toggleClass('hidden');
+        //     });
+
+        function buildUrl() {
+            var url = location.href;
+            return url.substring(0, url.lastIndexOf('/')) + '/show-manually.html?' + $('#form').serialize();
+        }
+    })();
+</script>
+</body>
+</html>
