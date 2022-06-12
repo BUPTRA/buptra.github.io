@@ -14,7 +14,7 @@
 
 -   **比赛时间：**2022年7月（待定中……）
 
--   **比赛平台：**红色警戒2战网对战平台（Ra2ol）
+-   **比赛平台：**红色警戒2战网对战平台（Ra2ol）/ 兰博玩对战平台 / CnCNet
 
 -   **比赛游戏：**命令与征服 红色警戒2（v1.006）
 
@@ -68,31 +68,30 @@
 
 地图池如下（地图后位置说明适用于2V2）：
 
-- DEFCON 6 防卫区争夺（附加赛专用）
 - Heck Freezes Over corners 冰天雪地四角 （左 VS 右）
 - Tour of Egypt 埃及之旅 （左 VS 右）
+- City Under Siege 围攻之都
 - Stormy Weather 暴风天 （左上 VS 右下）
+- Snow Valley 雪谷
 - South Pacific 南太平洋 （左 VS 右）
-- Lost Lake 失落之湖 （左 VS 右）
-- Offense Defense 攻击与防御（左 VS 右）
+- Official Tournament Map 正式锦标赛地图（4）
+- Montana DMZ 蒙大拿非军事区天梯版
+- Country Swing 乡村乐（也叫“快乐之村”）天梯版
 - Face Down 恐怖岛（左 VS 右）
 - Jungle of Vietnam (custom) 越南丛林 （左 VS 右）
-- Coldest Peak (custom) 冷峰 （左上 VS 右下）
-- Official Tournament Map 正式锦标赛地图（4）
-- Depth Charge 深水炸弹（海战模式）
-- Country Swing 乡村乐（也叫“快乐之村”）
-- Heatland 心脏地带
-- Snow Valley 雪谷
-- Shrapnel Mountain 榴散弹堆
-- Double Trouble 超级大麻烦
-- Arena 竞技广场
+- Divide and Conquer 分而治之
 - Tsunami 海啸
+- Depth Charge 深水炸弹（海战模式）
+- Lost Lake 失落之湖 （左 VS 右）
+- Heatland 心脏地带
+- Coldest Peak (custom) 冰冷山峰 （左上 VS 右下）
+- Double Trouble 超级大麻烦
 - Hammer and Sickle 正面冲突
-- Arctic Circle 北极圈
+- DEFCON 6 防卫区争夺（附加赛混战专用）
 
 ### 阵营/颜色/位置
 
--   **阵营：**自选，**同队两人禁止使用相同阵营**，即必须是一盟军和一苏联。
+-   **阵营：**自选，2 V 2时**同队两人禁止使用相同阵营**，即必须是一盟军和一苏联。
 
 -   **颜色：**随机。
 
