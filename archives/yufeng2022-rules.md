@@ -75,8 +75,8 @@
 - Snow Valley 雪谷
 - South Pacific 南太平洋 （左 VS 右）
 - Official Tournament Map 正式锦标赛地图（4）
-- Montana DMZ 蒙大拿非军事区天梯版
-- Country Swing 乡村乐（也叫“快乐之村”）天梯版
+- Montana DMZ 蒙大拿非军事区
+- Country Swing 乡村乐（也叫“快乐之村”）
 - Face Down 恐怖岛（左 VS 右）
 - Jungle of Vietnam (custom) 越南丛林 （左 VS 右）
 - Divide and Conquer 分而治之
