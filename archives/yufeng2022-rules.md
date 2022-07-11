@@ -66,27 +66,27 @@
 
 每盘比赛第一局默认为冰天雪地，后面败者选图。每盘比赛地图不允许重复使用。
 
-地图池如下（地图后位置说明适用于2V2）：
+地图池如下（未特别说明的为官方原版，地图后位置说明适用于2V2）：
 
-- Heck Freezes Over corners 冰天雪地四角 （左 VS 右）
+- Heck Freezes Over corners 原版冰天雪地四角 （左 VS 右）（战网可搜“冰天雪地4-Ra2ol”）
 - Tour of Egypt 埃及之旅 （左 VS 右）
-- City Under Siege 围攻之都
+- City Under Siege 围攻之都（去信标版）
 - Stormy Weather 暴风天 （左上 VS 右下）
 - Snow Valley 雪谷
-- South Pacific 南太平洋 （左 VS 右）
+- South Pacific 南太平洋 （左 VS 右）（22使用原版；11使用LE，战网擂台赛版）
 - Official Tournament Map 正式锦标赛地图（4）
-- Montana DMZ 蒙大拿非军事区
-- Country Swing 乡村乐（也叫“快乐之村”）
+- Montana DMZ 蒙大拿非军事区LE四人版（战网擂台赛版）
+- Country Swing 乡村乐LE（战网擂台赛版，非扩大版乡村乐）
 - Face Down 恐怖岛（左 VS 右）
-- Jungle of Vietnam (custom) 越南丛林 （左 VS 右）
-- Divide and Conquer 分而治之
+- Jungle of Vietnam 越南丛林 （左 VS 右）（CnCNet地图，战网擂台赛版）
+- Divide and Conquer 分而治之（CnCNet地图，战网擂台赛版）
 - Tsunami 海啸
 - Depth Charge 深水炸弹（海战模式）
 - Lost Lake 失落之湖 （左 VS 右）
 - Heatland 心脏地带
-- Coldest Peak (custom) 冰冷山峰 （左上 VS 右下）
+- Coldest Peak 冰冷山峰 （左上 VS 右下）（CnCNet地图，战网擂台赛版）
 - Double Trouble 超级大麻烦
-- Hammer and Sickle 正面冲突
+- Hammer and Sickle 正面冲突LE（战网擂台赛版）
 - DEFCON 6 防卫区争夺（附加赛混战专用）
 
 ### 阵营/颜色/位置
